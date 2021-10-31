@@ -124,8 +124,7 @@ public class StorageActivity extends AppCompatActivity {
         if(nFile.length() > 0 && isiText.length() > 0 && curDir != null) {
             File file = new File(curDir, nFile);
             try {
-                OutputStreamWriter writer = new OutputStreamWriter(
-                        new FileOutputStream(file));
+                OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(file));
                 writer.write(isiText);
                 writer.close();
                 Toast.makeText(this, "Text sudah tersimpan",Toast.LENGTH_LONG).show();
